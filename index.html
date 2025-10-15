@@ -1,11 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L3</title>
+    <link rel="stylesheet" href="./styles/main.css" />
 </head>
+
 <body>
-    <h1>He</h1>
+    <div class="hud" role="toolbar" aria-label="Game controls">
+        <div class="group">
+            <button id="btnStart" class="primary">Start</button>
+            <button id="btnReset">Reset</button>
+            <button id="btnMenu">Menu</button>
+            <button id="btnNext">Next Scene</button>
+            <button id="btnStop" class="danger">Stop</button>
+        </div>
+        <div class="group">
+            <label for="selScheme">Controls</label>
+            <select id="selScheme" title="Control scheme">
+                <option value="platform">Platform (A/D + Space)</option>
+                <option value="wasd">WASD (fly)</option>
+            </select>
+        </div>
+        <div class="group">
+            <label for="selDifficulty">Difficulty</label>
+            <select id="selDifficulty" title="Difficulty">
+                <option value="easy">Easy</option>
+                <option value="normal" selected>Normal</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+    </div>
+    <div class="help">
+        <div>Controls: <span class="kbd">A</span>/<span class="kbd">D</span> and <span class="kbd">Space</span> for jump
+            (platform). <span class="kbd">W</span>/<span class="kbd">A</span>/<span class="kbd">S</span>/<span
+                class="kbd">D</span> (WASD mode).</div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
 </body>
+
 </html>
